@@ -90,17 +90,17 @@ class Lecturer(Mentor):
         if not isinstance(other, Lecturer):
             print('Сравниваются объекты разных классов')
             return
-        return self.grades_average() > other.grades_average()
+        return self.grades_average_() > other.grades_average_()
     def __lt__(self, other):
         if not isinstance(other, Lecturer):
             print('Сравниваются объекты разных классов')
             return
-        return self.grades_average() < other.grades_average()
+        return self.grades_average_() < other.grades_average_()
     def __eq__(self, other):
         if not isinstance(other, Lecturer):
             print('Сравниваются объекты разных классов')
             return
-        return self.grades_average() == other.grades_average()  
+        return self.grades_average_() == other.grades_average_()  
 
     
     def __str__(self):
@@ -220,9 +220,9 @@ else:
 print()
 
 
-if mentor_lecturer_1 > mentor_lecturer_1:
+if mentor_lecturer_1 > mentor_lecturer_2:
     print(f'Средняя оценка {mentor_lecturer_1.name} {mentor_lecturer_1.surname} больше, чем средняя оценка {mentor_lecturer_2.name} {mentor_lecturer_2.surname}')
-elif mentor_lecturer_1 < mentor_lecturer_1:
+elif mentor_lecturer_1 < mentor_lecturer_2:
     print(f'Средняя оценка {mentor_lecturer_1.name} {mentor_lecturer_1.surname} меньше, чем средняя оценка {mentor_lecturer_2.name} {mentor_lecturer_2.surname}')
 else:
     print(f'Средняя оценка {mentor_lecturer_1.name} {mentor_lecturer_1.surname}  равна средней оценке {mentor_lecturer_2.name} {mentor_lecturer_2.surname}')
@@ -232,4 +232,4 @@ print()
 courses_average_students(Student.student_list, 'Python')
 courses_average_lecturer(Lecturer.lecturer_list, 'Git')
 
-print('ok')
+print("that's all!")
